@@ -1,5 +1,6 @@
 from ubuntu:latest
 maintainer Kat McIvor 
+LABEL Description="Ubuntu container, updated with maven git and java installed"
 
 #update the image
 RUN apt-get update && apt-get clean
@@ -18,3 +19,5 @@ RUN apt-get install -y git
 
 #install java
 RUN apt-get install -y openjdk-7-jdk
+
+CMD supervisord -c /etc/supervisor.conf
