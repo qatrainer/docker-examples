@@ -7,4 +7,6 @@ run apt-get install -y tomcat7
 EXPOSE 8080
 # CMD service tomcat7 start && tail -f /var/lib/tomcat7/logs/catalina.out
 
+run apt-get install -y supervisor
+
 CMD supervisord -c /etc/supervisor.conf
