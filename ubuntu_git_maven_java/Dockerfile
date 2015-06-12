@@ -19,5 +19,3 @@ RUN apt-get install -y git
 
 #install java
 RUN apt-get install -y openjdk-7-jdk
-
-CMD supervisord -c /etc/supervisor.conf
