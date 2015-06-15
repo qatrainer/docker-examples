@@ -1,0 +1,2 @@
+Tutorial adapted from : https://docs.docker.com/examples/nodejs_web_app/
+To run: docker run -P -d kizzie/centos-hello-node
