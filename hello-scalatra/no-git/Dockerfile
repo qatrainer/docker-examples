@@ -22,11 +22,12 @@ RUN apt-get install -y git
 #install java
 RUN apt-get install -y openjdk-7-jdk
 
-#install tomcat
-#run apt-get install -y tomcat7
+#install jetty
+
 
 #build the project
-run git clone https://bitbucket.org/kizzie/hello-scalatra
+COPY target/scalatra-maven-prototype.war 
+#run git clone https://bitbucket.org/kizzie/hello-scalatra
 
 WORKDIR /hello-scalatra
 run mvn package 
