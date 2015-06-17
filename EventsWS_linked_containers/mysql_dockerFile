@@ -1,0 +1,29 @@
+#to run: docker run -d -P kizzie/eventsws-mysql
+from mysql
+maintainer Kat McIvor
+
+#all the updates, ca-certificates and procps are for getting the sql file from bitbucket -- may be better to copy this over rather than download?
+run apt-get update
+run apt-get install -y wget
+run apt-get install -y ca-certificates
+run apt-get install -y procps
+run apt-get install -y supervisor
+
+#get the sql file
+run wget https://bitbucket.org/qatrainingauthors/eventsws/raw/4672f14dc557c2c25dd7947ad978e781a99f4857/events.sql
+
+#copy in the create database line and the supervisor config
+copy createDB.sh createDB.sh
+copy supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+
+# set this to be runnable
+run chmod +x /createDB.sh
+
+# run it!
+run /createDB.sh
+
+#entry point, we want the supervisor to set off the MySQL instance, otherwise it just gets killed when the process ends. This keeps it alive
+CMD ["/usr/bin/supervisord"]
+
+#port required for mysql
+expose 3306
