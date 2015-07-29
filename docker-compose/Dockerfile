@@ -30,5 +30,3 @@ run mvn package
 
 expose 8080
 CMD mvn jetty:run
-
-
