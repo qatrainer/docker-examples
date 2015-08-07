@@ -9,3 +9,8 @@ to run:
 
 sudo docker run -d -v /home/user/Docker/php_mysql_linked/sqlvolume/:/var/lib/mysql/ --name mysql kizzie/eventsmysql
 sudo docker run -d --link mysql:mysql --name apache -p 80:80 kizzie/eventsphp
+
+
+mysql volume must be owned by this user: 
+drwxrwxr-x 5 vboxadd vboxsf 4096 Aug  7 13:25 sqlvolume
+
