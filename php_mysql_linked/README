@@ -1,0 +1,11 @@
+to build:
+
+sudo docker build -t kizzie/eventsphp --file Dockerfile-apache .
+sudo docker build -t kizzie/eventsmysql --file Dockerfile-mysql .
+
+
+to run:
+(uses a volume to setup database from sqlvolume directory)
+
+sudo docker run -d -v /home/user/Docker/php_mysql_linked/sqlvolume/:/var/lib/mysql/ --name mysql kizzie/eventsmysql
+sudo docker run -d --link mysql:mysql --name apache -p 80:80 kizzie/eventsphp
