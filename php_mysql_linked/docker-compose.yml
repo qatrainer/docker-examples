@@ -1,0 +1,11 @@
+apache:
+  image: kizzie/eventsphp
+  ports: 
+    - "80:80"
+  links:
+    - mysql
+
+mysql:
+  image: kizzie/eventsmysql
+  volumes:
+    - /home/user/Docker/php_mysql_linked/sqlvolume/:/var/lib/mysql/

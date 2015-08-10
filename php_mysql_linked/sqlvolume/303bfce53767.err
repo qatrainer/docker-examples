@@ -1,0 +1,31 @@
+150807 12:20:45 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+2015-08-07 12:20:46 0 [Note] /usr/sbin/mysqld (mysqld 5.6.26) starting as process 275 ...
+2015-08-07 12:20:46 275 [Note] Plugin 'FEDERATED' is disabled.
+2015-08-07 12:20:46 275 [Note] InnoDB: Using atomics to ref count buffer pool pages
+2015-08-07 12:20:46 275 [Note] InnoDB: The InnoDB memory heap is disabled
+2015-08-07 12:20:46 275 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2015-08-07 12:20:46 275 [Note] InnoDB: Memory barrier is not used
+2015-08-07 12:20:46 275 [Note] InnoDB: Compressed tables use zlib 1.2.7
+2015-08-07 12:20:46 275 [Note] InnoDB: Using Linux native AIO
+2015-08-07 12:20:46 275 [Note] InnoDB: Not using CPU crc32 instructions
+2015-08-07 12:20:46 275 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+2015-08-07 12:20:46 275 [Note] InnoDB: Completed initialization of buffer pool
+2015-08-07 12:20:46 275 [Note] InnoDB: Highest supported file format is Barracuda.
+2015-08-07 12:20:46 275 [Note] InnoDB: The log sequence numbers 1633233 and 1633233 in ibdata files do not match the log sequence number 1633273 in the ib_logfiles!
+2015-08-07 12:20:46 275 [Note] InnoDB: Database was not shutdown normally!
+2015-08-07 12:20:46 275 [Note] InnoDB: Starting crash recovery.
+2015-08-07 12:20:46 275 [Note] InnoDB: Reading tablespace information from the .ibd files...
+2015-08-07 12:20:46 275 [Note] InnoDB: Restoring possible half-written data pages 
+2015-08-07 12:20:46 275 [Note] InnoDB: from the doublewrite buffer...
+2015-08-07 12:20:46 275 [Note] InnoDB: 128 rollback segment(s) are active.
+2015-08-07 12:20:46 275 [Note] InnoDB: Waiting for purge to start
+2015-08-07 12:20:46 275 [Note] InnoDB: 5.6.26 started; log sequence number 1633273
+2015-08-07 12:20:46 275 [Note] Server hostname (bind-address): '*'; port: 3306
+2015-08-07 12:20:46 275 [Note] IPv6 is available.
+2015-08-07 12:20:46 275 [Note]   - '::' resolves to '::';
+2015-08-07 12:20:46 275 [Note] Server socket created on IP: '::'.
+2015-08-07 12:20:46 275 [Note] Event Scheduler: Loaded 0 events
+2015-08-07 12:20:46 275 [Note] /usr/sbin/mysqld: ready for connections.
+Version: '5.6.26'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server (GPL)
+2015-08-07 12:22:05 275 [Warning] IP address '172.17.0.16' could not be resolved: Name or service not known
+2015-08-07 12:22:58 275 [Warning] IP address '172.17.0.17' could not be resolved: Name or service not known

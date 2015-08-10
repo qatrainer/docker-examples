@@ -1,0 +1,25 @@
+from mysql
+maintainer Kat McIvor
+
+#update all
+run apt-get update
+run apt-get install -y supervisor
+
+
+#linking a volume now... 
+# copy sql/events.sql events.sql
+
+RUN sed -i -e"s/^bind-address\s*=\s*127.0.0.1/bind-address = 0.0.0.0/" /etc/mysql/my.cnf
+#RUN /usr/sbin/mysqld & \
+#    sleep 10s &&\
+#    echo "GRANT ALL ON *.* TO admin@'%' IDENTIFIED BY 'changeme' WITH GRANT OPTION; FLUSH PRIVILEGES" | mysql
+
+
+volume ["/var/lib/mysql"]
+
+expose 3306
+
+#start the mysql service
+copy setup/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+CMD ["/usr/bin/supervisord"]
+
