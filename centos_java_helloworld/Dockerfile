@@ -7,3 +7,5 @@ run yum install -y java-1.7.0-openjdk-devel
 copy hello.java /
 
 run javac hello.java
+
+entrypoint java hello
